@@ -43,9 +43,55 @@ h2 {
     justify-content: space-around;
 }
 
+#topButton {
+  display: none;
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 100px;
+  right: 20px;
+  z-index: 99;
+  background-color: black;
+  border-radius: 80%;
+  outline: none;
+  color: white;
+  cursor: pointer;
+}
+
+#popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    width: 50%;
+    padding: 20px 0 30px;
+    line-height: 1;
+    background-color: #333333;
+    box-shadow: 2px 2px 10px 10px white;
+    color: red;
+    text-align: center;
+    line-height: 1.6;
+}
+
+#content > h3 {
+    font-size: 2rem;
+}
+
+#button {
+    margin-top: 25px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    width: 100px;
+}
+
 .fa {
     font-size: 4rem;
     margin-right: 10px;
+}
+
+.fa-arrow-circle-up {
+    font-size: 30px;
+    margin-left: 8px;
 }
 
 .news {

@@ -44,6 +44,13 @@ const quotesList = [
 const quoteContainer = document.querySelector(".quoteContainer");
 const quote = document.querySelector(".quote");
 const author = document.querySelector(".author");
+const topButton = document.getElementById("topButton");
+
+window.onload = function() {
+    document.getElementById("button").onclick = function() {
+      document.getElementById("popup").style.display = "none"
+    };
+};
 
 function display() {
     let random = Math.floor((Math.random() * 10)); 
@@ -61,3 +68,15 @@ function display() {
 
 display();
 
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        topButton.style.display = "block";
+      } else {
+        topButton.style.display = "none";
+      }
+};
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
