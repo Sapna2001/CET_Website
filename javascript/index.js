@@ -49,7 +49,7 @@ const topButton = document.getElementById("topButton");
 const login = document.getElementById("login");
 const user = document.getElementById("user");
 const loginButton = document.getElementById("loginButton");
-const userType = document.querySelector(".userType");
+const userName = document.querySelector(".userName");
 
 // onload
 window.onload = function() {
@@ -101,6 +101,8 @@ function loginFuction() {
 
 function loginValue(userType) {
     user.style.display = "block";
-    userType.innerHTML = userType.toUpperCase();
-    loginButton.style.display = "none";
+    loginButton.style.display = "none";  
+    let userMention = document.createElement("h3"); 
+    userMention.innerText = userType;
+    userName.appendChild(userMention);
 }
