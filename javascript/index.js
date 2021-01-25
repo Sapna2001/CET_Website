@@ -1,3 +1,4 @@
+// items
 const quotesList = [
     {
         quotes : "Education is the most powerful weapon which you can use to change the world",
@@ -45,13 +46,34 @@ const quoteContainer = document.querySelector(".quoteContainer");
 const quote = document.querySelector(".quote");
 const author = document.querySelector(".author");
 const topButton = document.getElementById("topButton");
+const login = document.getElementById("login");
+const user = document.getElementById("user");
+const loginButton = document.getElementById("loginButton");
+const userType = document.querySelector(".userType");
 
+// onload
 window.onload = function() {
     document.getElementById("button").onclick = function() {
       document.getElementById("popup").style.display = "none"
     };
+    user.style.display = "none";
 };
 
+// scroll
+window.onscroll = function() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        topButton.style.display = "block";
+      } else {
+        topButton.style.display = "none";
+      }
+};
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+
+// quote
 function display() {
     let random = Math.floor((Math.random() * 10)); 
     let paragraphQuote = document.createElement("P");
@@ -68,15 +90,17 @@ function display() {
 
 display();
 
-window.onscroll = function() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        topButton.style.display = "block";
-      } else {
-        topButton.style.display = "none";
-      }
-};
+// login
+function loginFuction() {
+    login.style.display = "block";
+    document.getElementById("popup").style.display = "none"
+    document.getElementById("closeLogin").onclick = function() {
+        login.style.display = "none";
+    }
+}
 
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+function loginValue(userType) {
+    user.style.display = "block";
+    userType.innerHTML = userType.toUpperCase();
+    loginButton.style.display = "none";
 }

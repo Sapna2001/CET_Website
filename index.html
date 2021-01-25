@@ -30,6 +30,28 @@
         <a class="nav-links" href="html/contact.html">Contact</a>
     </nav>
 
+    <!-- login -->
+    <div class="loginPanel">
+        <div id="user">
+            <i class="fa fa-user userIcon"></i>
+            <h2 class="userType"></h2>
+        </div>
+        <button onclick="loginFuction()" id="loginButton">Sign Up</button>
+        <div id="login"> 
+            <div class="loginInput">
+                <input type="radio" id="student" name="user" value="student" id="loginRadio" onclick="loginValue(this.value)">
+                <label for="student">STUDENT</label><br>
+                <input type="radio" id="teacher" name="user" value="teacher" id="loginRadio" onclick="loginValue(this.value)">
+                <label for="teacher">TEACHER</label><br>
+                <input type="radio" id="staff" name="user" value="staff" id="loginRadio" onclick="loginValue(this.value)">
+                <label for="staff">STAFF</label><br>
+                <input type="radio" id="others" name="user" value="others" id="loginRadio" onclick="loginValue(this.value)" >
+                <label for="others">OTHERS</label><br>
+            </div>
+            <button id="closeLogin">Close</button>
+        </div>
+    </div>
+
     <!-- topbar -->
     <div id="top">
         <div>
